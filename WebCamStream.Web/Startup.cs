@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Builder;
+﻿using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
-using OpenCvSharp;
 
 namespace WebCamStream.Web
 {
@@ -31,59 +25,7 @@ namespace WebCamStream.Web
             }
 
             app.UseStaticFiles();
-
-            //app.Use(async (context, next) =>
-            //{
-            //    if (context.Request.Path.ToString().Equals("/sse"))
-            //    {
-            //        var response = context.Response;
-            //        response.Headers.Add("Content-Type", "text/event-stream");
-
-            //        VideoCapture capture = new VideoCapture(0);
-
-            //        //int sleepTime = (int)Math.Round(1000 / capture.Fps);
-
-            //        //using (Window window = new Window("capture"))
-            //        //{
-            //        using (Mat image = new Mat()) // Frame image buffer
-            //        {
-            //            // When the movie playback reaches end, Mat.data becomes NULL.
-            //            while (true)
-            //            {
-            //                capture.Read(image); // same as cvQueryFrame
-            //                if (image.Empty())
-            //                    break;
-
-            //                // WriteAsync requires `using Microsoft.AspNetCore.Http`
-            //                var base64img = Convert.ToBase64String(image.ToBytes());
-            //                response.WriteAsync($"data: {base64img}").Wait();
-
-            //                response.Body.Flush();
-            //                await Task.Delay(5 * 1000);
-            //            }
-            //        }
-            //        //}
-
-            //        //for (var i = 0; true; ++i)
-            //        //{
-            //        //    WriteAsync requires `using Microsoft.AspNetCore.Http`
-            //        //    await response
-            //        //        .WriteAsync($"data: Middleware {i} at {DateTime.Now}\r\r");
-
-            //        //    response.Body.Flush();
-            //        //    await Task.Delay(5 * 1000);
-            //        //}
-            //    }
-
-            //    await next.Invoke();
-            //});
-
             app.UseMvcWithDefaultRoute();
-
-            //app.Run(async (context) =>
-            //{
-            //    await context.Response.WriteAsync("Hello World!");
-            //});
         }
     }
 }
