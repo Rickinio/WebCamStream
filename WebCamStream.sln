@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.27428.2002
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebCamStream.Console", "WebCamStream.Console\WebCamStream.Console.csproj", "{AAF31380-0F79-4D60-AB37-AA1AD122ACE1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebCamStream.Web", "WebCamStream.Web\WebCamStream.Web.csproj", "{70B8F120-0610-45DF-B183-3C60604A336B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{AAF31380-0F79-4D60-AB37-AA1AD122ACE1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AAF31380-0F79-4D60-AB37-AA1AD122ACE1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AAF31380-0F79-4D60-AB37-AA1AD122ACE1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{70B8F120-0610-45DF-B183-3C60604A336B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{70B8F120-0610-45DF-B183-3C60604A336B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{70B8F120-0610-45DF-B183-3C60604A336B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{70B8F120-0610-45DF-B183-3C60604A336B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

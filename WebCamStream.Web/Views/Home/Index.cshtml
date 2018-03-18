@@ -1,0 +1,44 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <h1>This is Index</h1>
+    <img id="camImg" src="/Home/GetImage" />
+
+    <script type="text/javascript">
+        var imgTag = document.getElementById("camImg");
+        setInterval(() => {
+            imgTag.src = "/Home/GetImage?rnd=" + Math.random();
+        }, 2000);
+
+    </script>
+
+    @*<script type="text/javascript">
+
+            var source = new EventSource('sse');
+
+            source.onmessage = function (event) {
+                console.log('onmessage: ' + event.data);
+            };
+
+            source.onopen = function (event) {
+                console.log('onopen');
+            };
+
+            source.onerror = function (event) {
+                console.log('onerror');
+            }
+
+        </script>*@
+
+</body>
+</html>
